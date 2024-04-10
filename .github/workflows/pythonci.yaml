@@ -15,10 +15,10 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Docker Build
-        run: docker build -t leelarajan/python-image:1.0 .
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/python-image:1.0 .
 
       - name: Docker Images List
         run: docker images
 
       - name: Docker Push
-        run: docker push leelarajan/python-image:1.0
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/python-image:1.0
