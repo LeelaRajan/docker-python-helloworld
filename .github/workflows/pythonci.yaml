@@ -7,6 +7,8 @@ jobs:
     steps:
       - name: Code Checkout
         uses: actions/setup-python@v5.1.0
+      - name: list the files
+        run: ls -lrt 
         
       - name: Docker Login
         uses: docker/login-action@v3.1.0
